@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <meta charset="utf-8">
+    <head>
+        <title>Event</title>
+    </head>
+    <body>
+    	<p>Event 1</p>
+        <style>
+            #el{
+                height: 50px;
+                width:100px;
+                background-color: green;
+                border-radius: 10px;
+                color:white;
+            }
+        </style>
+            <a href="https://learn.javascript.ru/"><input type="button" id="el" value="Click me" onclick="alert("Покинути?")"></a>     
+        <script>
+            document.getElementById('el');
+            el.onclick = function (event) {
+                var leave= confirm ("Ви справді хочете покину цю сторінку?");
+                if (leave){
+                   return true;
+                }else {
+                   return false;
+                }
+                
+            };
+        </script> 
+              
+    </body>
+</html>

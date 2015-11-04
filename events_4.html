@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <meta charset="utf-8">
+    <head>
+        <title>Event</title>
+    </head>
+    <body>
+    	<p>Event 4</p>
+        <style>
+            .el{
+                height: 50px;
+                width:100px;
+                background-color: green;
+                border-radius: 10px;
+                color:white;
+            }
+        </style>
+        <form id='el'>
+            <a href="https://learn.javascript.ru/"><input type="button" class="el" value="Click me"></a>
+        </form>     
+            <script>
+                var el = document.getElementById('el');
+
+                el.onclick = function(event) {
+
+                    function link (href) {
+                    var leave = confirm('Ви справді хочете покину цю сторінку?');
+                    if (!leave) return false;
+                    }
+
+                    var target = event.target;
+
+                    while (target != this) {
+                        if (target.nodeName == 'A') {
+                        return link (target.getAttribute('href')); 
+                        }
+                    target = target.parentNode;
+                    }
+                }
+
+            </script>    
+       
+              
+    </body>
+</html>

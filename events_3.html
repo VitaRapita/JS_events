@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <meta charset="utf-8">
+    <head>
+        <title>Event</title>
+    </head>
+    <body>
+    	<p>Event 3</p>
+        <style>
+            #el{
+                height: 50px;
+                width:100px;
+                background-color: green;
+                border-radius: 10px;
+                color:white;
+            }
+        </style>
+            <a href="https://learn.javascript.ru/"><input type="button" id="el" value="Click me"></a> 
+            <script>
+                var a = document.getElementById('el');
+
+                var question = function(event){
+                    var leave =confirm ("Ви справді хочете покину цю сторінку?");
+                    if(!leave){
+                        event.preventDefault();
+                    }
+
+
+                }
+                a.addEventListener('click',question, false);
+
+            </script>    
+       
+              
+    </body>
+</html>
